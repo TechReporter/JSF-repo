@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+<ui:define name="nocache">
+	<meta http-equiv="X-Frame-Options" content="DENY" />
+	<meta http-equiv="X-XSS-Protection" content="1" />
+	<meta http-equiv="cache-control" content="max-age=0" />
+	<meta http-equiv="expires" content="0" />
+	<meta http-equiv="pragma" content="no-cache" />
+	<meta http-equiv="X-Content-Security-Policy"
+		content="default-src 'self'" />
+	<meta http-equiv="Strict-Transport-Security" content="max-age=31536000" />
+	<meta http-equiv="Content-type"
+		content="text/HTML,text/plain,image/GIF,image/JPEG" />
+</ui:define>
+
+<h:head>
+
+	<title>Project</title>
+
+
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans'
+		rel='stylesheet' type='text/css' />
+	<link href="./resources/bootstrap/css/bootstrap.min.css"
+		type="text/css" rel="Stylesheet" />
+	<link href="./resources//font-awesome/css/font-awesome.min.css"
+		type="text/css" rel="Stylesheet" />
+
+
+	<!-- Data Tables -->
+	<link
+		href="./resources/css/plugins/dataTables/dataTables.bootstrap.css"
+		rel="stylesheet" />
+	<link
+		href="./resources/css/plugins/dataTables/dataTables.responsive.css"
+		rel="stylesheet" />
+	<link
+		href="./resources/css/plugins/dataTables/dataTables.tableTools.min.css"
+		rel="stylesheet" />
+	<link href="./resources/animate.css" type="text/css" rel="Stylesheet" />
+
+	<link href="./resources/css/styleJSF.css" type="text/css"
+		rel="Stylesheet" />
+	<link href="./resources/css/custom.css" type="text/css"
+		rel="Stylesheet" />
+	<link href="./resources/css/style.css" rel="stylesheet" />
+	<link href="./resources/css/properties.css" rel="stylesheet" />
+
+	<ui:insert name="stylesheet"></ui:insert>
+	<ui:insert name="metadata"></ui:insert>
+	<ui:insert name="nocache"></ui:insert>
+	<style>
+.ic_arrow_normal {
+	width: 16px;
+	height: 16px;
+	object-fit: contain;
+}
+</style>
+
+	<style type="text/css">
+.ui-panelmenu .ui-panelmenu-header a {
+	padding-top: 5px !important;
+	background-color: #00295d !important;
+	font-family: Times, Times New Roman, serif !important;
+	color: White !important;
+	padding: 1px 1px !important;
+	font-weight: 100 !important;
+	text-shadow: none !important;
+}
+
+.ui-panelmenu .ui-menuitem-text {
+	color: darkblue !important;
+}
+
+.ui-stack {
+	padding-bottom: 70px !important;
+}
+
+.ui-stack .openStack li span {
+	font-family: Times New Roman;
+	display: block;
+	height: 14px;
+	position: absolute;
+	top: 17px;
+	right: 60px;
+	line-height: 14px;
+	border: 0;
+	background-color: white;
+	padding-top: 13px;
+	padding-bottom: 23px;
+	padding-right: 15px;
+	padding-left: 15px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	color: black;
+	text-align: center;
+	opacity: .85;
+	filter: alpha(opacity = 85);
+	text-shadow: none;
+}
+</style>
+
+</h:head>
+<h:body styleClass="fixed-sidebar">
+	<div class="navbar marine-blue-bg margin-0"
+		style="height: 60px !important;">
+
+		<div class="dropdown profile-element">
+			<span class="col-sm-3 "> <img
+				src="./resources/images/bell.png" class="logo"
+				style="padding: 0px 7px 14px 0px !important" /> <i class="nav-label"
+				style="color: white; font-family: Times New Roman !important; font-size: initial !important;"><b>Pantallas del Mag
+						</b></i>
+			</span>
+
+			<div class="tatheer-logo col-sm-6"></div>
+			<div class="nav navbar-top-links navbar-right col-sm-4">
+				<span
+					style="color: White; font-weight: bold; margin-left: 235px !important; font-size: initial !important;">
+					&nbsp;</span>
+				<h:outputText 
+					styleClass="text-label"
+					style="color: white !important; font-size:initial !important;" />
+			</div>
+		</div>
+
+	</div>
+	<h:form>
+		<div id="wrapper">
+			<div class="navbar-default navbar-static-side"
+				style="background-color: #F2D7D5; width: 238px !important; margin-top: -5px !important;">
+				<div class="sidebar-collapse">
+				
+					<br/>
+					
+					<h:commandButton style="margin-top:0px !important; 
+    					padding-top: 5px !important;
+    					padding-bottom: 5px !important;"
+						styleClass="btn btn-primary"
+						type="submit" value="Menu"
+						action="#{dashboardBean.doRedirect('viewDetails.xhtml')}" >
+					</h:commandButton>	
+					
+					<h:commandButton style="margin-top:5px !important;
+    					padding-top: 5px !important;
+    					padding-bottom: 5px !important;"
+						styleClass="btn btn-primary"
+						type="submit" value="Tipos de Alerta"
+						>
+					</h:commandButton>
+					
+					<h:commandButton style="margin-top:5px !important;
+    					padding-top: 5px !important;
+    					padding-bottom: 5px !important;"
+						styleClass="btn btn-primary"
+						type="submit" value="Alertas Tempranas"
+						>
+					</h:commandButton>
+					
+					<h:commandButton style="margin-top:5px !important;
+    					padding-top: 5px !important;
+    					padding-bottom: 5px !important;"
+						styleClass="btn btn-primary"
+						type="submit" value="Tipos de Informacon"
+						action="#{dashboardBean.doRedirect('tiposinformation.xhtml')}">
+					</h:commandButton>
+					
+					<h:commandButton style="margin-top:5px !important;
+    					padding-top: 5px !important;
+    					padding-bottom: 5px !important;"
+						styleClass="btn btn-primary"
+						type="submit" value="Detaile de Informacon"
+						>
+					</h:commandButton>
+					
+					<h:commandButton style="margin-top:5px !important;
+    					padding-top: 5px !important;
+    					padding-bottom: 5px !important;"
+						styleClass="btn btn-primary"
+						type="submit" value="Sugerencious"
+						>
+					</h:commandButton>
+					
+					<h:commandButton style="margin-top:5px !important;
+    					padding-top: 5px !important;
+    					padding-bottom: 5px !important;"
+						styleClass="btn btn-primary"
+						type="submit" value="Usuarios App"
+						>
+					</h:commandButton>
+					
+					<h:commandButton style="margin-top:5px !important;
+    					padding-top: 5px !important;
+    					padding-bottom: 5px !important;"
+						styleClass="btn btn-primary"
+						type="submit" value="Usuarios Web"
+						>
+					</h:commandButton>
+
+					<h:commandButton style="margin-top:5px !important;
+    					padding-top: 5px !important;
+    					padding-bottom: 5px !important;"
+						styleClass="btn btn-primary"
+						type="submit" value="Asociaion Productores"
+						action="#{dashboardBean.doRedirect('generalproductors.xhtml')}">						
+					</h:commandButton>
+					
+					<h:commandButton rendered="#{dashboardBean.showSubBtns}" style="margin-top:5px !important;
+    					padding-top: 5px !important;
+    					padding-bottom: 5px !important;
+    					margin-left:34px !important;
+    					width:193px !important"
+						styleClass="btn btn-primary"
+						type="submit" value="Productores"
+						action="#{dashboardBean.doRedirect('productores.xhtml')}">						
+					</h:commandButton>
+					
+					<h:commandButton rendered="#{dashboardBean.showSubBtns}" style="margin-top:5px !important;
+    					padding-top: 5px !important;
+    					padding-bottom: 5px !important;
+    					margin-left:34px !important;
+    					width:193px !important"
+						styleClass="btn btn-primary"
+						type="submit" value="Productores/Productos"
+						action="#{dashboardBean.doRedirect('productos.xhtml')}">						
+					</h:commandButton>
+					
+					<h:commandButton rendered="#{dashboardBean.showSubBtns}" style="margin-top:5px !important;
+    					padding-top: 5px !important;
+    					padding-bottom: 5px !important;
+    					margin-left:34px !important;
+    					width:193px !important"
+						styleClass="btn btn-primary"
+						type="submit" value="Productores/Certificaciones"
+						action="#{dashboardBean.doRedirect('certificaciones.xhtml')}">						
+					</h:commandButton>
+					
+					<h:commandButton rendered="#{dashboardBean.showSubBtns}" style="margin-top:5px !important;
+    					padding-top: 5px !important;
+    					padding-bottom: 5px !important;
+    					margin-left:34px !important;
+    					width:193px !important"
+						styleClass="btn btn-primary"
+						type="submit" value="Productores/Paises"
+						action="#{dashboardBean.doRedirect('paises.xhtml')}">						
+					</h:commandButton>
+					
+					<h:commandButton style="margin-top:5px !important;
+    					padding-top: 5px !important;
+    					padding-bottom: 5px !important;"
+						styleClass="btn btn-primary"
+						type="submit" value="Certificaciones"
+						action="#{dashboardBean.doRedirect('infodeprecios.xhtml')}">
+					</h:commandButton>
+					
+					<h:commandButton style="margin-top:5px !important;
+    					padding-top: 5px !important;
+    					padding-bottom: 5px !important;"
+						styleClass="btn btn-primary"
+						type="submit" value="Precios Internacionales"
+						action="#{dashboardBean.doRedirect('infodeprecios.xhtml')}">
+					</h:commandButton>
+					
+					<h:commandButton style="margin-top:5px !important;
+    					padding-top: 5px !important;
+    					padding-bottom: 5px !important;"
+						styleClass="btn btn-primary"
+						type="submit" value="Informes de Precios"
+						>
+					</h:commandButton>
+					
+				</div>
+			</div>
+		</div>
+	</h:form>
+	<div id="page-wrapper" class="gray-bg"
+		style="margin: 0px 0 0 270px !important;">
+
+		<!-- MAIN CONTENT  -->
+		<div
+			style="padding-left: 0 !important; padding-right: 10px !important;">
+			<div class="row" style="margin-bottom: 25px">
+				<div class="col-sm-12">
+					<ui:insert name="js"></ui:insert>
+					<ui:insert name="content">
+						<h:form>
+							
+						</h:form>
+					</ui:insert>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./resources/js/inspinia.js"></script>
+	<script src="./resources/js/plugins/pace/pace.min.js"></script>
+	<script src="./resources/js/bootstrap.min.js"></script>
+	<script src="./resources/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+
+	<script
+		src="./resources/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="./resources/js/custom.js"></script>
+
+</h:body>
+</html>

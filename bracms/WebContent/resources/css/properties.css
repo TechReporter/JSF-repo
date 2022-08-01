@@ -1,0 +1,202 @@
+/*fonts colors starts here*/
+
+.white {
+    color: #ffffff !important;
+}
+
+.slate-grey {
+    color: #58585a !important;
+}
+
+.marine-blue {
+    color: #8B0000 !important;
+}
+
+.turquoise-blue {
+    color: #00a9d4;
+}
+
+/*fonts colors ends here*/
+
+
+/*backgound colors starts here*/
+.white-bg {
+    background-color: #ffffff !important;
+}
+
+.slate-grey-bg {
+    background-color: #58585a;
+}
+
+.marine-blue-bg {
+    background-color: #8B0000 !important;
+}
+
+.turquoise-blue-bg {
+    background-color: #00a9d4 !important;
+}
+
+/*backgound colors ends here*/
+
+.navbar-default .nav > li a:hover,
+.navbar-default .nav > li a:focus {
+    background-color: #00a9d4;
+    color: #fff;
+}
+
+.nav-second-level li a.active_menu,
+.nav > li > a.active_menu {
+    background-color: #00a9d4;
+}
+
+/*.nav > li.active , .nav > li.active a {
+	background-color: #00a9d4;
+}*/
+
+button {
+    font-weight: normal !important;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.margin-0 {
+    margin: 0px;
+}
+
+/*table strucuter*/
+.ui-datatable table {
+    table-layout: auto;
+}
+
+table > thead > tr > th.ui-state-default,
+.ui-widget-content table > thead > tr > th.ui-state-default {
+    color: black;
+    background-color: #fafafa;
+    border-top: 2px solid #8B0000;
+    border-bottom: 2px solid #8B0000;
+    border-left: 0px;
+    border-right: 0px;
+    font-weight: bold;
+    font-size: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 44px;
+}
+
+table > tbody.ui-datatable-data > tr {
+    border: 0px;
+}
+
+table > tbody.ui-datatable-data > tr > td {
+    background-color: #fff;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid #dadada;
+    font-size: 14px;
+    color: #58585a;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-weight: normal;
+    height: 44px;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.tblhdrs .ui-paginator {
+    border: 0px;
+}
+
+table > tbody.ui-datatable-data > tr > td > button.ui-state-default {
+    background-color: #8B0000 !important;
+    border-radius: 5px;
+    margin: 0px 10px;
+    padding: 2px 0px;
+    color: White !important;
+    text-shadow:none !important;
+}
+
+.tblhdrs .ui-paginator {
+    background: transparent;
+}
+
+.tblhdrs .ui-paginator a {
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: #dadada;
+    padding: 7px 12px;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.tblhdrs .ui-paginator a.ui-state-active {
+    background-color: #00a9d4;
+    color: #fff;
+}
+
+.tblhdrs .ui-paginator .ui-paginator-current {
+    color: #58585a;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.float-right {
+    float: right;
+}
+
+.ui-radiobutton-box.ui-state-default {
+    background-color: #fff;
+    border: 1px solid rgba(88, 88, 90, 0.54);
+}
+
+.ui-radiobutton-box.ui-state-active {
+    border: 1px solid #00a9d4;
+}
+
+.ui-radiobutton-box.ui-state-active span {
+    background-image: none;
+    margin: 2px;
+    width: 10px;
+    height: 10px;
+    background-color: #00a9d4;
+    border-radius: 50%;
+
+}
+
+.ui-chkbox-box {
+    margin-right: 10px;
+    margin-top: 3px;
+    background-color: transparent;
+}
+
+.ui-chkbox .ui-chkbox-label {
+    font-size: 14px;
+    color: #58585a;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+    background-color: #00a9d4;
+}
+
+
+.vertical-radio table {
+    margin-bottom: 20px;
+}
+
+.vertical-radio table tr td:nth-child(odd) {
+    width: 30px;
+}

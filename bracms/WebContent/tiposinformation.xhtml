@@ -1,0 +1,95 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	template="dashboard.xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+		<script type="text/javascript">
+            function runRemoteCommand(param1, param2) {
+                var promise = rc([{name: 'param1', value: param1}, {name: 'id', value: param2}]);
+                promise.then(function (responseData) {
+                    var serverTime = responseData.jqXHR.pfArgs.serverTime;
+                    console.log("Request successful, returned server time is", serverTime);
+                }).catch(function (error) {
+                    console.error("Request failed", error);
+                });
+            }
+        </script>
+	
+	</h:head>
+
+	<ui:define name="nocache">
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="pragma" content="no-cache" />
+	</ui:define>
+
+	<ui:define name="content">
+		<div class="">
+			<div class="row">
+				<div class="col-md-12">
+					<div style="padding-left: 1px !important; padding-top: 45px;">
+						<p:outputLabel value="Mantenimiento de Tipos Alertas"
+							styleClass="page-content-title" />
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group">
+					<div class="col-sm-12 text-align-left">
+						
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="form-group">
+					<div class="col-sm-12 text-align-left">
+						<h:form id="formId2">
+							<p:growl id="messages" showDetail="true" sticky="false" />
+							<p:dataTable id="tblTipoDetail" var="sub" value="#{infoDePreciosBean.dummy}"
+								paginator="true" rowIndexVar="rowId"
+								paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+								currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+								paginatorPosition="bottom" paginatorAlwaysVisible="false" styleClass="page-content-datatable" >
+								
+								<p:column headerText="ID Informacion">
+									<h:outputText value="#{sub.idRetrospectiva}"/>
+								</p:column>
+
+								<p:column headerText="Nambre">
+									<h:outputText value="#{sub.titulo}"/>
+								</p:column>
+								
+								<p:column headerText="Imagen">
+									<h:outputText value="#{sub.descripcion}"/>
+								</p:column>
+
+								<p:column headerText="Estado">
+									<h:outputText value="#{sub.activo}"/>
+								</p:column>
+
+								<p:column headerText="#{msg.lblActions}" colspan="3">
+									
+									<p:commandButton value="Editor" style="border-radius:9px !important; background-color:#00295d !important; 
+										font-weight:100 !important; text-shadow: none !important; color: white !important;padding:0px;" 
+										onclick="rc([{name: 'param1', value: 'edit'}, {name: 'id', value: '#{sub.idRetrospectiva}'}])">
+									</p:commandButton>	
+									
+								</p:column>
+								
+							</p:dataTable>
+							<p:remoteCommand name="rc" actionListener="#{infoDePreciosBean.execute}"/>
+						</h:form>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</ui:define>
+</ui:composition>

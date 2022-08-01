@@ -1,0 +1,49 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	template="dashboard.xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+		<script type="text/javascript">
+            function runRemoteCommand(param1, param2) {
+                var promise = rc([{name: 'param1', value: param1}, {name: 'msisdn', value: param2}]);
+                promise.then(function (responseData) {
+                    var serverTime = responseData.jqXHR.pfArgs.serverTime;
+                    console.log("Request successful, returned server time is", serverTime);
+                }).catch(function (error) {
+                    console.error("Request failed", error);
+                });
+            }
+        </script>
+	
+	</h:head>
+
+	<ui:define name="nocache">
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="pragma" content="no-cache" />
+	</ui:define>
+
+	<ui:define name="content">
+		<div class="">
+			<div class="row">
+				<div class="col-md-12">
+					<div style="padding-left: 1px !important; padding-top: 45px;">
+							<h:form>
+								<p:breadCrumb>
+									<p:menuitem/>
+									<p:menuitem value="General" action="#{dashboardBean.doRedirect('generalproductors.xhtml')}"/>
+									<p:menuitem value="Productos" action="#{dashboardBean.doRedirect('productores.xhtml')}"/>
+									<p:menuitem value="Certificaciones" action="#{dashboardBean.doRedirect('certificaciones.xhtml')}" />
+									<p:menuitem value="Paises" action="#{dashboardBean.doRedirect('paises.xhtml')}"/>
+								</p:breadCrumb>
+							</h:form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</ui:define>
+</ui:composition>

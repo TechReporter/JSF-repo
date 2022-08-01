@@ -1,0 +1,207 @@
+.float-right {
+    float: right;
+}
+
+
+.logo {
+    padding-left: 30px;
+    margin-top: 6px;
+}
+
+.navbar-top-links {
+    padding-top: 17px;
+    padding-right: 40px;
+}
+
+h5 {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+#page-wrapper h5.turquoise-blue {
+    display: inline-block;
+    position: relative;
+}
+
+#page-wrapper h5.turquoise-blue::after {
+    content: "";
+    border-bottom: 1px solid #00a9d4;
+    width: 100%;
+    position: absolute;
+    top: 33px;
+    left: 0px;
+}
+
+
+hr {
+    margin-top: 10px;
+}
+
+.tatheer-logo input {
+    padding: 13px 25px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.tatheer-logo span {
+
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    font-size: 16px;
+}
+
+.ui-button-text-icon-left .ui-button-text {
+    padding: .3em 1em .3em 1.5em;
+}
+
+#page-wrapper {
+    top: 60px;
+}
+
+.ui-state-default {
+    background-image: none;
+}
+
+
+.general-btn {
+    border-radius: 5px;
+    padding: 6px;
+    min-width: 120px;
+    min-height: 34px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 14px !important
+}
+
+.popup-btn {
+    border-radius: 5px;
+    padding: 8px;
+    min-width: 160px;
+    min-height: 45px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.btn-gray-border {
+    border: 1px solid #dadada;
+}
+
+
+.ui-dialog {
+    width: 456px;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+.ui-dialog .ui-dialog-content {
+
+    height: auto !important;
+}
+
+.ui-dialog .ui-dialog-content form {
+    font-size: 20px;
+    color: #58585a;
+}
+
+
+.ui-dialog-titlebar {
+    /*display: none;*/
+}
+
+
+.ui-widget-content {
+    border: none;
+}
+
+.tatheer-logo {
+    position: relative;
+}
+
+.border_top_grey {
+    border-bottom: 1px solid #dadada;
+
+}
+
+.no_margin {
+    margin: 0 !important;
+}
+
+.no_padding {
+    padding: 0 !important;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearFix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.dashboard_table {
+    border-top: 1px solid #dadada;
+    margin: 20px 0px 15px 0px;
+    padding-top: 10px;
+}
+
+
+label {
+    font-weight: normal;
+}
+
+.ui-dialog-content label {
+    font-weight: bold;
+}
+
+.calendar-icon-style button {
+    border-right: 1px solid #dadada;
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    background: white;
+    border-left: none;
+    padding: 1px 0px 2px 0px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+input {
+    border-radius: 5px !important;
+}
+
+
+.calendar-icon-style input {
+    border-bottom-left-radius: 5px !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.ui-tabs.ui-tabs-top .ui-tabs-nav li.ui-tabs-selected:after {
+    content: "";
+    border-bottom: 2px solid #00a9d4;
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+}
+
+.horizontal-popup {
+    width: 455px;
+    padding: 30px 0px 30px 20px;
+    border-radius: 5px;
+}
+
+.vertical-popup {
+    width: 425px;
+    padding: 10px 20px 20px 20px;
+    border-radius: 5px;
+}
+
+#attachment .ui-helper-clearfix {
+    display: none;
+}
+

@@ -1,0 +1,399 @@
+.float-right {
+    float: right;
+}
+
+
+.logo {
+    padding-left: 30px;
+    margin-top: 9px;
+}
+
+.navbar-top-links {
+    padding-top: 17px;
+    padding-right: 40px;
+}
+
+h5 {
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.btm-blue-border {
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+}
+
+.btm-blue-border::after {
+    content: "";
+    border-bottom: 1px solid #00a9d4;
+    width: 100%;
+    position: absolute;
+    top: 35px;
+    left: 0px;
+}
+
+hr {
+    margin-top: 10px;
+}
+
+.tatheer-logo input {
+    padding: 13px 13px;
+    border-radius: 5px;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.tatheer-logo span {
+
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 16px;
+}
+
+.ui-button-text-icon-left .ui-button-text {
+    padding: .3em 1em .3em 1.5em;
+}
+
+#page-wrapper {
+    top: 60px;
+}
+
+.ui-state-default {
+    background-image: none;
+}
+
+.general-btn {
+    border-radius: 5px;
+    padding: 7px;
+    min-width: 120px;
+    min-height: 34px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 14px !important;
+    background-image: none !important;
+}
+
+.popup-btn {
+    border-radius: 5px;
+    padding: 8px;
+    min-width: 160px;
+    min-height: 45px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-image: none !important;
+}
+
+
+.btn-gray-border {
+    border: 1px solid #dadada;
+}
+
+
+.ui-dialog {
+    width: 456px;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+.ui-dialog .ui-dialog-content {
+
+    height: auto !important;
+}
+
+.ui-dialog .ui-dialog-content form {
+    font-weight: bold;
+    color: #58585a;
+}
+
+
+.ui-dialog-titlebar {
+    /*display: none;*/
+}
+
+
+.ui-widget-content {
+    border: none;
+}
+
+.tatheer-logo {
+    position: relative;
+}
+
+.border_top_grey {
+    border-bottom: 1px solid #dadada;
+
+}
+
+.no_margin {
+    margin: 0 !important;
+}
+
+.no_padding {
+    padding: 0 !important;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearFix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.dashboard_table {
+    border-top: 1px solid #dadada;
+    margin: 20px 0px 15px 0px;
+}
+
+label {
+    font-weight: normal;
+}
+
+.ui-dialog-content label {
+    font-weight: bold;
+}
+
+
+.ui-tabs.ui-tabs-top .ui-tabs-nav li.ui-tabs-selected:after {
+    content: "";
+    border-bottom: 2px solid #00a9d4;
+    width: 100%;
+    position: absolute;
+    top: 43px;
+    left: 0px;
+}
+
+.ui-tabs .ui-tabs-panel {
+    padding: 0px;
+    padding-top: 32px;
+}
+
+.horizontal-popup {
+    width: 455px !important;
+    border-radius: 5px;
+}
+
+.horizontal-popup .ui-dialog-content {
+    padding: 30px;
+}
+
+.horizontal-popup button.white-bg {
+    float: right;
+    margin-right: 25px;
+}
+
+.horizontal-popup p,
+.horizontal-popup span.text-label,
+.vertical-popup p {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.horizontal-popup .ui-dialog-titlebar, .vertical-popup .ui-dialog-titlebar {
+    padding: 10px 15px !important;
+    border-radius: 8px 8px 0px 0px;
+    background-color: #fafafa;
+    font-size: 15px;
+}
+
+
+.vertical-popup {
+    width: 425px !important;
+    border-radius: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.vertical-popup .ui-dialog-content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 30px;
+}
+
+.horizontal-popup .ui-helper-clearfix {
+    display: none;
+}
+
+input:focus,
+input.ui-state-focus {
+    border-color: rgba(88, 88, 90, 0.7) !important;
+    box-shadow: none !important;
+
+}
+
+.vertical-popup input {
+    width: 100%;
+    text-align: left;
+    padding: 10px 0px 10px 20px;
+}
+
+.vertical-popup button, .horizontal-popup button {
+    margin-top: 12px !important;
+}
+
+.counting-btn input {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.counting-btn {
+    width: 100%;
+}
+
+.counting-btn .ui-spinner-down {
+    margin-right: 34px;
+    margin-bottom: 14px;
+    background-color: rgba(88, 88, 90, 0.54) !important;
+    background: none;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+.counting-btn .ui-spinner-down .ui-button-text .ui-icon-triangle-1-s {
+    background-position: -63px -128px;
+    background-image: url(../images/uiImages.png);
+}
+
+.counting-btn .ui-spinner-up {
+    margin-top: 13px;
+    margin-right: 10px;
+    background-color: #00a9d4 !important;
+    background: none;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+.counting-btn .ui-spinner-up .ui-button-text .ui-icon-triangle-1-n {
+    background-position: -32px -127px;
+    background-image: url(../images/uiImages.png);
+}
+
+.dashboard_table input {
+    line-height: 21px;
+    text-align: left;
+    padding: 5px 10px;
+    float: left;
+    margin-top: 8px;
+}
+
+input {
+    border-radius: 5px !important;
+}
+
+.calendar-border button {
+    background: white;
+    border-left: none;
+    padding: 9px 0px 2px 0px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-top: 8px;
+}
+
+.calendar-border input {
+    border-radius: 5px 0px 0px 5px !important;
+    line-height: 21px !important;
+    text-align: left;
+    font-weight: normal;
+}
+
+.calendar-style-icon .ui-button-icon-only {
+    margin-left: -30px;
+    background: none;
+    border: 0px !important;
+}
+
+.calendar-style-icon input {
+    width: 100%;
+    text-align: left;
+    height: 44px;
+    font-size: 16px !important;
+    font-weight: normal !important;
+}
+
+span.text-label {
+    font-weight: bold;
+}
+
+.param-align {
+    margin-top: 38px;
+}
+
+.id-heading label {
+    background-color: #f8f8f8;
+    font-size: 15px !important;
+    font-weight: bold !important;
+}
+
+.id-heading {
+    position: relative;
+}
+
+.id-heading:before {
+    content: "";
+    border-top: 1px solid #dadada;
+    position: absolute;
+    top: -1px;
+    right: 0px;
+    left: 0px;
+}
+
+.ui-paginator-rpp-options {
+    background-color: #00a9d4 !important;
+    color: #fff !important;
+    border-radius: 5px;
+    border-color: none !important;
+    padding: 7px 0px;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.line-height label {
+    line-height: 32px !important;
+}
+
+.ui-selectcheckboxmenu,
+.ui-selectcheckboxmenu-trigger {
+    background: none !important;
+}
+
+.ui-selectcheckboxmenu-trigger {
+    border: 0px !important;
+}
+
+.ui-fileupload-filename {
+    font-size: 16px;
+    margin: 0;
+    border-radius: 5px;
+    margin-left: 0px !important;
+    height: 44px;
+    color:#00295d;
+    padding-left:100px;
+    background:white; 
+}
+
+.ui-fileupload-filename:focus {
+
+}
+
+.ui-fileupload-simple span.ui-button {
+    position: absolute;
+    background: aliceblue;
+    border-radius: 9px;
+    padding-top:5px;
+    padding-left:0px;
+    margin: 0px;
+    height:34px;
+    width:90px;
+    
+}
+
+.ui-fileupload-simple .ui-icon {
+/*     display: none; */
+}
+

@@ -1,0 +1,104 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	template="dashboard.xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+		<script type="text/javascript">
+            function runRemoteCommand(param1, param2) {
+                var promise = rc([{name: 'param1', value: param1}, {name: 'msisdn', value: param2}]);
+                promise.then(function (responseData) {
+                    var serverTime = responseData.jqXHR.pfArgs.serverTime;
+                    console.log("Request successful, returned server time is", serverTime);
+                }).catch(function (error) {
+                    console.error("Request failed", error);
+                });
+            }
+        </script>
+        
+        <f:metadata>
+			<f:event listener="#{infoDePreciosBean.loadDetails()}" type="preRenderView"></f:event>
+		</f:metadata>
+	
+	</h:head>
+
+	<ui:define name="nocache">
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="pragma" content="no-cache" />
+	</ui:define>
+
+	<ui:define name="content">
+		<div class="">
+			<div class="row">
+				<div class="col-md-12">
+					<div style="padding-left: 1px !important; padding-top: 45px;">
+						<p:outputLabel value="Mantenimiento de Informe de Precios"
+							styleClass="page-content-title" />
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group">
+					<div class="col-sm-12 text-align-left">
+						<h:form id="createPreciosFormId">
+							<h:commandButton
+								style="margin-top:5px !important; margin-left:835px !important;
+    							padding-top: 5px !important;
+    							padding-bottom: 5px !important;"
+								styleClass="btn btn-primary"
+								type="submit" value="Agregar Informe de precios"
+								action="#{dashboardBean.doRedirect('infodepreciosarchivo.xhtml')}">
+								
+							</h:commandButton>
+						</h:form>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="form-group">
+					<div class="col-sm-12 text-align-left">
+						<h:form id="formId1">
+							<p:growl id="messages" showDetail="true" sticky="false" />
+							<p:dataTable id="tblInformDePrecios" var="infoPre" 
+								paginator="true" rowIndexVar="rowId" value="#{infoDePreciosBean.informeDePreciosList}"
+								paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+								currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+								paginatorPosition="bottom" paginatorAlwaysVisible="false" styleClass="page-content-datatable">
+
+								<p:column headerText="ID Informe de Precios">
+									<h:outputText value="#{infoPre.idRetrospectiva}"/>
+								</p:column>
+
+								<p:column headerText="Titulo">
+									<h:outputText value="#{infoPre.titulo}"/>
+								</p:column>
+
+								<p:column headerText="Descripcion">
+									<h:outputText value="#{infoPre.descripcion}"/>
+								</p:column>
+
+								<p:column headerText="Cambiar Estado">
+									<h:selectOneMenu readonly="true" >
+										<f:selectItem itemLabel="#{infoPre.activo}"  />
+									</h:selectOneMenu>
+
+								</p:column>
+								
+							</p:dataTable>
+							
+						</h:form>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</ui:define>
+</ui:composition>

@@ -1,0 +1,72 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	template="/dashboard.xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+
+	<ui:define name="nocache">
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="pragma" content="no-cache" />
+	</ui:define>
+
+	<ui:define name="content">
+		<div class="">
+			<div class="row">
+				<div class="col-md-12">
+					<div style="padding-left: 1px !important; padding-top: 15px;">
+						<p:outputLabel id="pageTitle"
+							value="Subir Archivo de Precios Internacionales"
+							styleClass="page-content-title" />
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group">
+					<div class="col-sm-12 text-align-left">
+						<p:growl id="messages" showDetail="true" sticky="true" />
+						<h:form id="preciosArchivoFormId" enctype="multipart/form-data">
+							<p:outputLabel value="Tipo de Precios"
+								styleClass="page-content-label" />
+							<h:selectOneMenu id="preciosOptions" required="true" requiredMessage="Select Option"
+								value="#{infoDePreciosBean.selectedPreciosArchivo}">
+								<f:selectItem itemLabel="Seleccione tipo de precios" itemValue=""
+									noSelectionOption="true" />
+								<f:selectItem itemLabel="Option 1" itemValue="option 1" />
+							</h:selectOneMenu>
+							<br />
+							<p:outputLabel value="Titulo"
+								styleClass="page-content-label" />
+							<p:inputText style="margin-left:50px;" value="#{infoDePreciosBean.titulo}"/>
+							<br/>
+							<p:outputLabel value="Descripcion"
+								styleClass="page-content-label" />
+							<p:inputTextarea autoResize="false" cols="50" rows="5" style="margin-left:20px;" value="#{infoDePreciosBean.description}"/>	
+							<br/>
+							
+								<p:commandButton value="Save" styleClass="page-content-btn"
+									action="#{infoDePreciosBean.save()}"
+									style="border-radius:9px !important; padding-top:5px !important;
+   									padding-left:0px !important; margin-left: 0px !important; height:30px !important; width:78px !important;" ajax="false"
+									update="messages">
+								</p:commandButton>
+								<p:commandButton value="Cancel" styleClass="page-content-btn"
+									action="#{infoDePreciosBean.clear()}"
+									style="border-radius:9px !important; padding-top:5px !important;
+   									padding-left:0px !important; margin-left: 15px !important; height:30px !important; width:78px !important;" ajax="false"
+									update="messages">
+								</p:commandButton>
+
+						</h:form>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</ui:define>
+
+</ui:composition>

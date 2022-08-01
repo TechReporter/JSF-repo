@@ -1,0 +1,111 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	template="dashboard.xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h:head>
+		
+	</h:head>
+
+	<ui:define name="nocache">
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="pragma" content="no-cache" />
+	</ui:define>
+
+	<ui:define name="content">
+		<div class="">
+			<div class="row">
+				<div class="col-md-12">
+					<div style="padding-left: 1px !important; padding-top: 45px;">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group">
+					<div class="col-sm-12 text-align-left">
+						<h:form id="createPreciosFormId">
+							
+							<span>
+							
+							<h:selectOneMenu>
+								<f:selectItem itemValue="Buscar Todos"  itemLabel="Buscar Todos" />
+							
+							</h:selectOneMenu>
+							
+							<h:commandButton
+								style="margin-top:5px !important; margin-left:835px !important;
+    							padding-top: 5px !important;
+    							padding-bottom: 5px !important;"
+								styleClass="btn btn-primary"
+								type="submit" value="Create Productor"
+								>
+								
+							</h:commandButton>
+							</span>
+							
+						</h:form>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="form-group">
+					<div class="col-sm-12 text-align-left">
+						<h:form id="genFormId">
+							<p:growl id="messages" showDetail="true" sticky="false" />
+							<p:dataTable id="tblGenForm" var="gen" 
+								paginator="true" rowIndexVar="rowId" 
+								paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+								currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+								paginatorPosition="bottom" paginatorAlwaysVisible="false" styleClass="page-content-datatable">
+
+								<p:column headerText="Nombre/Productor">
+									<h:outputText />
+								</p:column>
+
+								<p:column headerText="Telefono">
+									<h:outputText />
+								</p:column>
+
+								<p:column headerText="Direccion">
+									<h:outputText />
+								</p:column>
+
+								<p:column headerText="Whatsaap">
+									<h:outputText />
+								</p:column>
+								
+								<p:column headerText="Facebook">
+									<h:outputText />
+								</p:column>
+								
+								<p:column headerText="Instagram">
+									<h:outputText />
+								</p:column>
+								
+								<p:column headerText="Estado">
+									<h:outputText />
+								</p:column>
+								
+								<p:column >
+									<p:commandButton value="Editor" />
+
+								</p:column>
+								
+							</p:dataTable>
+							
+						</h:form>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</ui:define>
+</ui:composition>

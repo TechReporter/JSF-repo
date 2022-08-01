@@ -1,0 +1,212 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+#container {
+    min-height: 100%;
+    position: relative;
+    width: 99%;
+    padding-left: 5px;
+    background-color: #1c2b36;
+}
+
+/*
+*
+*/
+
+.ui-state-default {
+    border: none;
+    color: white;
+}
+
+.ui-widget-content .ui-state-default {
+    border: none;
+}
+
+.ui-inputfield, .ui-widget-content .ui-inputfield, .ui-widget-header .ui-inputfield {
+    border: none;
+    box-shadow: none;
+    text-shadow: 0px;
+}
+
+.ui-corner-all {
+    -webkit-border-radius: 0;
+}
+
+#login-container {
+    min-height: 100%;
+    position: relative;
+    width: 99%;
+    padding-left: 5px;
+    background-color: #eff5f5;
+}
+
+#login-content {
+    height: 600px;
+}
+
+#login-left {
+    width: 30%;
+    float: left;
+    height: 600px;
+}
+
+#login-right {
+    width: 70%;
+    float: right;
+    height: 600px;
+}
+
+#login-right-top {
+    height: 80px;
+}
+
+#login-right-bottom {
+    height: 500px;
+}
+
+#login-logo {
+    width: 500px;
+    height: 150px;
+    background-repeat: no-repeat;
+    margin-left: 135px;
+    background-color: #18a689;
+}
+
+#login {
+    height: 450px;
+    width: 500px;
+    margin-top: 40px;
+
+}
+
+#login-form {
+    align: right;
+}
+
+.login-field {
+    margin-top: 10px;
+    height: 55px;
+    background-color: #e6e6e6;
+}
+
+#test {
+    height: 75px;
+    width: 334px;
+    margin-left: 90px;
+}
+
+#login-username {
+    background-color: #233644;
+}
+
+#login-password {
+    background-color: #233644;
+}
+
+#login-button {
+    background-color: #15a4fa;
+}
+
+.login-username-img {
+    background-image: url(user_icon.png);
+    height: 48px;
+    width: 48px;
+}
+
+.login-pwd-img {
+    background-image: url(password_icon.png);
+    height: 48px;
+    width: 48px;
+}
+
+.login-msisdn-img {
+    background-image: url(mobile_icon.png);
+    height: 55px;
+    width: 48px;
+}
+
+.login-email-img {
+    background-image: url(email_icon.png);
+    height: 55px;
+    width: 48px;
+}
+
+.login-img {
+    height: 16px;
+    width: 16px;
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.login-input {
+    height: 45px;
+    width: 100%;
+    border: none;
+    background-color: #233644;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: #fffff !important;
+}
+
+.login-password {
+    height: 45px;
+    width: 270px;
+    border: none;
+    background-color: #233644;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: none;
+    color: #fffff !important;
+}
+
+.link {
+    text-decoration: none;
+    color: #eff5f5;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.ui-messages {
+    width: 330px;
+}
+
+.ui-messages-error, .ui-message-error {
+    border-radius: 5px;
+    color: red;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.ui-messages-info, .ui-message-info {
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.ui-messages-info, .ui-messages-warn, .ui-messages-error, .ui-messages-fatal {
+    padding: 5px 0 5px 10px;
+}
+
+.ui-inputfield:focus {
+    outline: 0;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.ui-button:hover {
+    outline: 0;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
